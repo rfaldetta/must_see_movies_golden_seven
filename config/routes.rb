@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get("/actors/new_form",           { :controller => "actors", :action => "new_form" })
   get("/create_actor",           { :controller => "actors", :action => "create_row" })
 
+  get("/movies/new_form",           { :controller => "movies", :action => "new_form" })
+  get("/create_movie",           { :controller => "movies", :action => "create_row" })
+
 
   # Routes to READ photos
   get("/directors",           { :controller => "directors", :action => "index" })
@@ -14,6 +17,9 @@ Rails.application.routes.draw do
 
   get("/actors",           { :controller => "actors", :action => "index" })
   get("/actors/:id",           { :controller => "actors", :action => "show" })
+
+  get("/movies",           { :controller => "movies", :action => "index" })
+  get("/movies/:id",           { :controller => "movies", :action => "show" })
 
 
 # Route to UPDATE photos
@@ -23,11 +29,17 @@ Rails.application.routes.draw do
   get("/actors/:id/edit_form",           { :controller => "actors", :action => "edit_form" })
   get("/update_actor/:id",           { :controller => "actors", :action => "update_row" })
 
+  get("/movies/:id/edit_form",           { :controller => "movies", :action => "edit_form" })
+  get("/update_movie/:id",           { :controller => "movies", :action => "update_row" })
+
 
 # Routes to DELETE photos
   get("/delete_director/:id",           { :controller => "directors", :action => "destroy" })
 
   get("/delete_actor/:id",           { :controller => "actors", :action => "destroy" })
+
+  get("/delete_movie/:id",           { :controller => "movies", :action => "destroy" })
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
